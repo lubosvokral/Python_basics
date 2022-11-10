@@ -20,7 +20,7 @@ def tah_hrace(pole):
     while True:
         cislo_policka = int(input("Na které políčko chceš hrát? "))
         cislo_policka = cislo_policka - 1
-        if cislo_policka > 0 and cislo_policka < 20 and pole[cislo_policka] == "*":
+        if cislo_policka > -1 and cislo_policka < 20 and pole[cislo_policka] == "*":
             return tah(pole, cislo_policka, symbol_hrac)
         else:
             print("Špatně zadaná pozice, zkus to znovu.")
