@@ -1,11 +1,12 @@
 import random
+
 while True:
     mozne_volby = ["kámen", "nůžky", "papír"]
     volba_pocitac = random.choice(mozne_volby)
     volba_hrac = None
+
     while volba_hrac not in mozne_volby:
-        print("Tato volba není možná, zkus to znovu")
-        volba_hrac = input("Vyber si kámen, nůžky nebo papír? ")
+        volba_hrac = input("Vyber si kámen, nůžky nebo papír? ").lower()
     print(f"\nTvá volba je {volba_hrac}, volba počítače je {volba_pocitac}.\n")
     if volba_hrac == volba_pocitac:
         print(f"Oba hráči zvolili {volba_hrac}. Je to plichta")
@@ -28,7 +29,8 @@ while True:
         
 
     
-    hrat_znovu = input("Chcete si ještě zahrát? ")
+    hrat_znovu = input("Chcete si ještě zahrát? ").lower()
     if hrat_znovu.lower() != "ano":         
         break
 
+print("Tak zase příště, Ahoj!")
