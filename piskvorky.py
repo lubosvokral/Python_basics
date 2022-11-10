@@ -45,8 +45,7 @@ def piskvorky1d():
     
     pole = 20 * "*"
 
-    while True:
-        
+    while True:       
         pole = tah_hrace(pole)
         print(pole)
         if vyhodnot(pole) != '*':
@@ -55,15 +54,18 @@ def piskvorky1d():
         print(pole)
         if vyhodnot(pole) != '*':
             break
-    
+        
     if vyhodnot(pole) == '!':
         print('Remíza!')
     elif vyhodnot(pole) == symbol_hrac:
         print('Vyhrál jsi!')
     elif vyhodnot(pole) == symbol_pocitac:
         print('Vyhrál počítač!')
-    hrat_znovu = input("Chcete si ještě zahrát? ")
-    if hrat_znovu.lower() != "ano":         
+
+  
+
+while True:
+    piskvorky1d()
+    hrat_znovu = input("Chcete si ještě zahrát? ").lower()
+    if hrat_znovu.lower() != "ano":
         break
- 
-piskvorky1d()
